@@ -42,7 +42,7 @@ output endpoint {
 ```
 ### NOTE:  Password will be created in SSM & AWS
 
-### please run
+### Please run
 ```
 terraform init
 terraform apply
