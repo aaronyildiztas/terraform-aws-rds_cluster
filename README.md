@@ -1,13 +1,13 @@
 # Build RDS Instance
-### Please copy paste below code
+### Please copy paste below code. Make sure update the username. Subnet id's needs to be replaced with your own subnet id's
 ```
 module "db" {
-    source = "../"
+    source = "aaronyildiztas/rds_cluster/aws"
     region = "us-east-2"
     subnet_ids = [
-        "subnet-023397f6469eba1c7",
-        "subnet-072e7b996506b11c4",
-        "subnet-062fe6f8a1156189d"
+        "subnet-01247d99afb162cdb",
+        "subnet-06ba492480eda4958",
+        "subnet-0e8af25fe00cb1d29"
     ]
     identifier          = "dbname"
     allocated_storage   = 20
@@ -40,4 +40,10 @@ output endpoint {
 }
 
 ```
-### NOTE:  Password will be created in SSM
+### NOTE:  Password will be created in SSM & AWS
+
+### please run
+```
+terraform init
+terraform apply
+```
